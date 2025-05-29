@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lewov - Premium Streetwear</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -18,7 +18,7 @@
       color: #333;
     }
     header {
-      background: #111;
+      background: #1a1a1a;
       padding: 20px 40px;
       color: white;
       display: flex;
@@ -30,8 +30,11 @@
       from { transform: translateY(-100%); }
       to { transform: translateY(0); }
     }
-    header h1 {
+    .logo {
+      font-family: 'Orbitron', sans-serif;
       font-size: 2rem;
+      color: #fff;
+      letter-spacing: 2px;
     }
     nav a {
       color: white;
@@ -40,106 +43,47 @@
       font-weight: 500;
     }
     .hero {
-      position: relative;
       height: 70vh;
+      position: relative;
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
+      color: white;
     }
-    .hero-video {
+    .hero video {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: 0;
+      z-index: -1;
     }
-    .hero-content {
-      z-index: 1;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
-      padding: 0 20px;
+    .hero h2 {
+      font-size: 3rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
       animation: fadeIn 2s ease;
     }
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-    .hero-content h2 {
-      font-size: 3rem;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+    .description {
       padding: 40px;
-    }
-    .product {
       background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.3s;
     }
-    .product:hover {
-      transform: scale(1.05);
-    }
-    .product img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-    }
-    .product h3 {
-      margin: 10px;
-    }
-    .product select {
-      margin: 10px auto;
-      padding: 5px;
-    }
-    .product button {
-      background: #111;
-      color: white;
-      border: none;
-      padding: 10px 20px;
+    .description h3 {
+      font-size: 2rem;
       margin-bottom: 20px;
-      cursor: pointer;
-      border-radius: 5px;
     }
-    .contact {
-      padding: 40px;
-      background: #fff;
-    }
-    .contact form {
-      max-width: 600px;
+    .description p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 800px;
       margin: auto;
-      display: flex;
-      flex-direction: column;
-    }
-    .contact input, .contact textarea {
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .contact button {
-      width: 150px;
-      align-self: center;
-      background: #111;
-      color: white;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 20px;
     }
     .slider {
       background: #000;
@@ -159,15 +103,21 @@
       0% { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>LEWOV</h1>
+    <div class="logo">LEWOV</div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
@@ -178,58 +128,16 @@
   </div>
 
   <section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="https://cdn.coverr.co/videos/coverr-fashion-model-walking-on-the-beach-4660/1080p.mp4" type="video/mp4">
+    <video autoplay muted loop>
+      <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
     </video>
-    <div class="hero-content">
-      <h2>Own the Look. Rule the Street.</h2>
-    </div>
+    <h2>Own the Look. Rule the Street.</h2>
   </section>
 
-  <section class="products" id="products">
-    <div class="product">
-      <img src="https://via.placeholder.com/300x300.png?text=Black+Signature+Hoodie" alt="Product 1">
-      <h3>Black Signature Hoodie</h3>
-      <select>
-        <option>Size: S</option>
-        <option>Size: M</option>
-        <option>Size: L</option>
-        <option>Size: XL</option>
-      </select>
-      <button>Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/300x300.png?text=White+Oversized+Tee" alt="Product 2">
-      <h3>White Oversized Tee</h3>
-      <select>
-        <option>Size: S</option>
-        <option>Size: M</option>
-        <option>Size: L</option>
-        <option>Size: XL</option>
-      </select>
-      <button>Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://via.placeholder.com/300x300.png?text=Full+Sleeve+Classic" alt="Product 3">
-      <h3>Classic Full Sleeve</h3>
-      <select>
-        <option>Size: S</option>
-        <option>Size: M</option>
-        <option>Size: L</option>
-        <option>Size: XL</option>
-      </select>
-      <button>Add to Cart</button>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 style="text-align:center; margin-bottom:20px">Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <section class="description">
+    <h3>About Lewov</h3>
+    <p>Lewov is a premium streetwear brand designed for modern trendsetters. We combine edgy designs, high-quality materials, and unmatched comfort to create pieces that empower your presence. Whether you're hitting the streets or chilling with friends, Lewov makes sure you do it in style.</p>
   </section>
 
   <footer>
