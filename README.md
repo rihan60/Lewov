@@ -1,247 +1,103 @@
-update_textdoc = {
-  "id": "683896f520348191ab313f2730e2ddfc",
-  "update_regex": ".*",
-  "new_text": """<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lewov - Premium Streetwear</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #d2b48c;
-      color: #333;
-    }
-    header {
-      background: #4b2e05;
-      padding: 20px 40px;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      animation: slideDown 1s ease;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
-    @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
-    }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      font-style: italic;
-      letter-spacing: 3px;
-      font-family: 'Poppins', sans-serif;
-      cursor: default;
-      text-shadow: 2px 2px 5px #000;
-      user-select: none;
-    }
-    nav a {
-      color: white;
-      margin-left: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #f3c677;
-      text-shadow: 0 0 5px #f3c677;
-    }
-    .hero {
-      background: url('https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      height: 75vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.85);
-      text-align: center;
-      padding: 0 20px;
-      animation: fadeIn 2s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    .hero h2 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      font-family: 'Poppins', sans-serif;
-      letter-spacing: 2px;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 5px #f3c677, 0 0 10px #f3c677;
-      }
-      to {
-        text-shadow: 0 0 20px #f3c677, 0 0 30px #f3c677;
-      }
-    }
-    .hero p {
-      font-size: 1.3rem;
-      max-width: 600px;
-      margin: 0 auto;
-      font-weight: 400;
-      font-style: italic;
-      letter-spacing: 1px;
-      animation: fadeInText 4s ease forwards;
-      opacity: 0;
-    }
-    @keyframes fadeInText {
-      to { opacity: 1; }
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 50px 40px;
-      background: #f7e9d2;
-    }
-    .product {
-      background: #fff8f0;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-      text-align: center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      position: relative;
-    }
-    .product:hover {
-      transform: scale(1.07);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      z-index: 10;
-    }
-    .product img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      border-bottom: 1px solid #d9cbb6;
-      animation: float 4s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .product h3 {
-      margin: 15px 10px 10px;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #4b2e05;
-    }
-    .product select {
-      margin: 15px auto 20px;
-      padding: 8px 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      cursor: pointer;
-      background: #f7e9d2;
-      transition: border-color 0.3s ease;
-    }
-    .product select:hover, .product select:focus {
-      border-color: #4b2e05;
-      outline: none;
-    }
-    .product button {
-      background: #4b2e05;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      margin-bottom: 25px;
-      cursor: pointer;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-    .product button:hover {
-      background-color: #6e4b12;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.35);
-    }
-    .contact {
-      padding: 60px 40px;
-      background: #fff8f0;
-      box-shadow: inset 0 0 15px #d9cbb6;
-    }
-    .contact h2 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #4b2e05;
-      margin-bottom: 25px;
-      font-weight: 700;
-      font-family: 'Poppins', sans-serif;
-      text-shadow: 1px 1px 2px #d9cbb6;
-    }
-    .contact form {
-      max-width: 650px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-    }
-    .contact input, .contact textarea {
-      padding: 15px 12px;
-      margin: 10px 0;
-      border: 1px solid #d9cbb6;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-family: 'Poppins', sans-serif;
-      transition: border-color 0.3s ease;
-    }
-    .contact input:focus, .contact textarea:focus {
-      outline: none;
-      border-color: #4b2e05;
-      box-shadow: 0 0 8px #4b2e05;
-    }
-    .contact button {
-      width: 180px;
-      align-self: center;
-      background: #4b2e05;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-top: 15px;
-      box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-      transition: background-color 0.3s ease;
-    }
-    .contact button:hover {
-      background-color: #6e4b12;
-      box-shadow: 0 7px 15px rgba(0,0,0,0.45);
-    }
-    footer {
-      background: #4b2e05;
-      color: white;
-      text-align: center;
-      padding: 22px 15px;
-      font-weight: 600;
-      font-size: 1rem;
-      box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
-      user-select: none;
-    }
-    .slider {
-      background: #3b2303;
-      color: #f3c677;
-      overflow: hidden;
-      white-space: nowrap;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-      font-weight: 600;
-      font-size: 1.1rem;
-      padding: 12px 0;
-      letter-spacing
+import { useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { motion } from "framer-motion";
 
+const products = [
+  {
+    name: "Drop Shoulder Hoodie",
+    description: "Premium cotton drop shoulder hoodie with Lewov branding.",
+    price: "$45",
+    img: "https://images.unsplash.com/photo-1602810316533-6f5bb18d96b3?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    name: "Streetwear Tee",
+    description: "Oversized T-shirt with subtle Lewov sleeve print.",
+    price: "$30",
+    img: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?auto=format&fit=crop&w=500&q=80"
+  },
+  {
+    name: "Cargo Pants",
+    description: "Stylish and comfortable utility pants for all day wear.",
+    price: "$50",
+    img: "https://images.unsplash.com/photo-1580983561447-7b6f4b3e5d17?auto=format&fit=crop&w=500&q=80"
+  }
+];
+
+export default function LewovStore() {
+  useEffect(() => {
+    document.body.style.backgroundColor = "#f5e1c0";
+  }, []);
+
+  return (
+    <div className="min-h-screen px-4 py-8">
+      <motion.h1
+        className="text-4xl font-bold text-center mb-10"
+        initial={{ opacity: 0, y: -40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        Lewov Clothing Store
+      </motion.h1>
+
+      <motion.div
+        className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              delayChildren: 0.3,
+              staggerChildren: 0.2
+            }
+          }
+        }}
+      >
+        {products.map((product, index) => (
+          <motion.div
+            key={index}
+            className="hover:scale-105 transition-transform"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Card className="rounded-2xl shadow-xl">
+              <img
+                src={product.img}
+                alt={product.name}
+                className="rounded-t-2xl w-full h-60 object-cover"
+              />
+              <CardContent className="p-4">
+                <h2 className="text-xl font-semibold mb-1">{product.name}</h2>
+                <p className="text-sm text-gray-700 mb-2">{product.description}</p>
+                <p className="font-bold text-lg">{product.price}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      <motion.div
+        className="bg-white rounded-2xl p-6 shadow-lg max-w-2xl mx-auto"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <h3 className="text-2xl font-bold mb-4 text-center">Contact Us</h3>
+        <form className="space-y-4">
+          <Input placeholder="Your Name" required />
+          <Input type="email" placeholder="Your Email" required />
+          <Textarea placeholder="Message" rows={4} required />
+          <div className="text-center">
+            <Button className="bg-black text-white rounded-xl px-6 py-2 hover:bg-gray-800">
+              Send Message
+            </Button>
+          </div>
+        </form>
+      </motion.div>
+    </div>
+  );
+}
