@@ -1,221 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lewov - Premium Streetwear</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewov - Own the Look</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Poppins', sans-serif;
-      background: #f4f4f4;
-      color: #333;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #111;
     }
     header {
-      background: #111;
-      padding: 20px 40px;
+      background-color: #111;
       color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      animation: slideDown 1s ease;
-    }
-    @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
-      font-size: 2rem;
+      margin: 0;
+      font-size: 2.5rem;
     }
-    nav a {
-      color: white;
-      margin-left: 20px;
-      text-decoration: none;
-      font-weight: 500;
+    header p {
+      font-style: italic;
+      color: #ccc;
     }
     .hero {
-      background: url('https://images.unsplash.com/photo-1612423284934-7016d437c4b3') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #111, #333);
       color: white;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
       text-align: center;
-      padding: 0 20px;
-      animation: fadeIn 2s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      padding: 60px 20px;
+      animation: slideUp 1.5s ease-out;
     }
     .hero h2 {
-      font-size: 3rem;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
     }
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      animation: fadeIn 2s ease-in-out;
     }
     .product {
-      background: white;
+      background-color: white;
       border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
     .product:hover {
       transform: scale(1.05);
     }
     .product img {
       width: 100%;
-      height: 300px;
+      height: 250px;
       object-fit: cover;
     }
     .product h3 {
-      margin: 10px;
+      margin: 10px 0 5px 0;
     }
-    .product select {
-      margin: 10px auto;
+    .options {
+      margin-bottom: 10px;
+    }
+    .options select {
+      margin: 5px;
       padding: 5px;
     }
-    .product button {
-      background: #111;
+    .add-to-cart {
+      background-color: #111;
       color: white;
+      padding: 10px;
       border: none;
-      padding: 10px 20px;
-      margin-bottom: 20px;
       cursor: pointer;
+      margin-bottom: 15px;
       border-radius: 5px;
     }
-    .contact {
-      padding: 40px;
-      background: #fff;
+    .add-to-cart:hover {
+      background-color: #444;
     }
-    .contact form {
-      max-width: 600px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
+    .contact-form {
+      padding: 30px;
+      background-color: #fff;
+      margin: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      animation: fadeIn 2s ease-in-out;
     }
-    .contact input, .contact textarea {
+    .contact-form h2 {
+      text-align: center;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
       padding: 10px;
       margin: 10px 0;
       border: 1px solid #ccc;
       border-radius: 5px;
     }
-    .contact button {
-      width: 150px;
-      align-self: center;
-      background: #111;
+    .contact-form button {
+      padding: 10px 20px;
+      background-color: #111;
       color: white;
       border: none;
-      padding: 10px;
       border-radius: 5px;
       cursor: pointer;
     }
+    .contact-form button:hover {
+      background-color: #333;
+    }
     footer {
-      background: #111;
+      background-color: #111;
       color: white;
       text-align: center;
       padding: 20px;
+      margin-top: 40px;
     }
-    .slider {
-      background: #000;
-      color: #fff;
-      overflow: hidden;
-      white-space: nowrap;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    .slider-text {
-      display: inline-block;
-      padding: 15px 0;
-      font-weight: 600;
-      font-size: 1rem;
-      animation: marquee 20s linear infinite;
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>LEWOV</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>Own the Look. Rule the Street.</p>
   </header>
 
-  <div class="slider">
-    <div class="slider-text">
-      New Drop Available Now — Black Signature Hoodie | White Oversized Tee | Classic Full Sleeve — Shop Fast Before Sold Out!
-    </div>
-  </div>
-
   <section class="hero">
-    <h2>Own the Look. Rule the Street.</h2>
+    <h2>New Collection 2025</h2>
+    <p>Trendy. Bold. You.</p>
   </section>
 
-  <section class="products" id="products">
+  <section class="products">
     <div class="product">
-      <img src="https://via.placeholder.com/300x300.png?text=Black+Signature+Hoodie" alt="Black Signature Hoodie">
+      <img src="https://via.placeholder.com/300x250.png?text=Black+Signature+Hoodie" alt="Black Signature Hoodie">
       <h3>Black Signature Hoodie</h3>
-      <select>
-        <option>Size: S</option>
-        <option>Size: M</option>
-        <option>Size: L</option>
-        <option>Size: XL</option>
-      </select>
-      <button>Add to Cart</button>
+      <div class="options">
+        <select>
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <select>
+          <option>Select Color</option>
+          <option>Black</option>
+          <option>Gray</option>
+        </select>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/300x300.png?text=White+Oversized+Tee" alt="White Oversized Tee">
-      <h3>White Oversized Tee</h3>
-      <select>
-        <option>Size: S</option>
-        <option>Size: M</option>
-        <option>Size: L</option>
-        <option>Size: XL</option>
-      </select>
-      <button>Add to Cart</button>
+      <img src="https://via.placeholder.com/300x250.png?text=Summer+Vibe+T-shirt" alt="Summer Vibe T-shirt">
+      <h3>Summer Vibe T-shirt</h3>
+      <div class="options">
+        <select>
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <select>
+          <option>Select Color</option>
+          <option>White</option>
+          <option>Yellow</option>
+        </select>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
     <div class="product">
-      <img src="https://via.placeholder.com/300x300.png?text=Full+Sleeve+Classic" alt="Classic Full Sleeve">
-      <h3>Classic Full Sleeve</h3>
-      <select>
-        <option>Size: S</option>
-        <option>Size: M</option>
-        <option>Size: L</option>
-        <option>Size: XL</option>
-      </select>
-      <button>Add to Cart</button>
+      <img src="https://via.placeholder.com/300x250.png?text=Classic+Full+Sleeve" alt="Lewov Classic Full Sleeve">
+      <h3>Lewov Classic Full Sleeve</h3>
+      <div class="options">
+        <select>
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <select>
+          <option>Select Color</option>
+          <option>Blue</option>
+          <option>Black</option>
+        </select>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product">
+      <img src="https://via.placeholder.com/300x250.png?text=Oversized+Tee" alt="Streetwear Oversized Tee">
+      <h3>Streetwear Oversized Tee</h3>
+      <div class="options">
+        <select>
+          <option>Select Size</option>
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <select>
+          <option>Select Color</option>
+          <option>Beige</option>
+          <option>Green</option>
+        </select>
+      </div>
+      <button class="add-to-cart">Add to Cart</button>
     </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2 style="text-align:center; margin-bottom:20px">Contact Us</h2>
+  <section class="contact-form">
+    <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>&copy; 2025 Lewov. All Rights Reserved.</p>
+    <p>&copy; 2025 Lewov. All rights reserved.</p>
   </footer>
 </body>
 </html>
